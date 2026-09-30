@@ -4,11 +4,14 @@ import Quickshell
 import QtQuick
 
 Singleton {
-    property string fontFamily: "FiraCode NerdFont"
+    property string fontFamily: "FiraCode Nerd Font"
+    property int barHSpacing: 20
+    property int barWinSpacing: 0
+    property int barTopSpacing: 10
     property int fontSize: 18
     property var fontWeight: Font.Medium
     property int borderWidth: 3
-    property int roundness: 10
+    property int roundness: 20
     property int barHeight: 40
     property int rModWidth: 600
     property int lModWidth: 500

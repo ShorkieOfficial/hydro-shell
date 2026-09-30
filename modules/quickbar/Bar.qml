@@ -12,9 +12,10 @@ PanelWindow {
 		right: true
 	}
 	margins {
-		top: 5
-		left: 5
-		right: 5
+		top: Settings.barTopSpacing
+		left: Settings.barHSpacing
+		right: Settings.barHSpacing
+		bottom: Settings.barWinSpacing
 	}
 	color: "transparent"
 	implicitHeight: Settings.barHeight
