@@ -5,7 +5,7 @@ import qs.config
 import qs.services.network
 
 Text {
-    text: NetworkBar.icon
+    text: NetworkBar.icon + " " + NetworkBar.shortNetName
     color: MatugenColors.textColor
     font {
         family: Settings.fontFamily

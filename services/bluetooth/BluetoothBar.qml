@@ -5,11 +5,11 @@ import Quickshell.Bluetooth
 
 Singleton {
     property var adapter: Bluetooth.defaultAdapter
-    property bool enabled: adapter.enabled
-    property bool discovering: adapter.discovering
+    property bool enabled: adapter?.enabled ?? false
+    property bool discovering: adapter?.discovering ?? false
     property var devices: Bluetooth.devices
     function devicesConnected() {
-        return devices.values.filter(d => d.connected)
+        return devices?.values.filter(d => d.connected) ?? null
     }
     property var connected: devicesConnected()
     property bool anyConnected: connected.length > 0

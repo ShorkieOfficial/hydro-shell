@@ -9,11 +9,16 @@ Singleton {
     function find(x) {
         return x?.values.find(item => item.connected) ?? null
     }
+    function short(x, max) {
+        if (!x) return ""
+        return x > max ? x.slice(0, max) + "..." : x
+    }
     property var connectedAdapter: find(adapters)
     property bool isWifi: connectedAdapter?.type === DeviceType.Wifi
     property bool isWired: connectedAdapter?.type === DeviceType.Wired
     property var connectedNet: isWifi ? find(connectedAdapter?.networks) : null
     property var netName: isWifi ? (connectedNet?.name ?? "") : ""
+    property var shortNetName: short(netName, 5)
     property var netStrenght: isWifi ? (connectedNet?.signalStrength ?? 0) : 0
     function strenght(x) {
         if (x < 0.2) return "󰤯"
