@@ -47,6 +47,9 @@ Rectangle {
             id: net
             Layout.fillWidth: true
             Layout.fillHeight: true
+            Network {
+                anchors.centerIn: parent
+            }
         }
         Item {
             id: bt
